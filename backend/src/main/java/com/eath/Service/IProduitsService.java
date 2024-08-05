@@ -1,4 +1,4 @@
-package com.eath.Service;
+package com.eath.service;
 
 import com.eath.entite.Produits;
 import org.springframework.stereotype.Service;

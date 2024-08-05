@@ -12,13 +12,18 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Utilisateurs implements Serializable{
+public class Utilisateur implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_utilisateur;
+    private Integer idUtilisateur;
 
-    private String preference ;
-    private String niveau_abonnement ;
+    @OneToOne
+    @JoinColumn(name = "id_personne", referencedColumnName = "idPersonne")
+    private Personne personne;
 
+    private String preference;
+    private String niveauAbonnement;
+    private Timestamp dateCreation;
+    private Timestamp dateModification;
 }

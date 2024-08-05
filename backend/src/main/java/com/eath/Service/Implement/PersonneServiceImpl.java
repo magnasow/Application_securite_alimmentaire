@@ -47,6 +47,6 @@ public class PersonneServiceImpl implements IPersonneService {
     @Override
     public Personne getOnePersonne(Integer idPersonne) {
         return personneRepository.findById(idPersonne).orElseThrow(()->
-                 new RuntimeException("La personne recherché n'exixte pas"));
+                 new RuntimeException("La personne recherché n'existe pas"));
     }
 }
